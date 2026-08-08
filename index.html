@@ -1,65 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
 
-<html>
 <head>
 
+    <meta charset="UTF-8">
 
-<script type="text/javascript" src="funciones.js"></script>
-<title>Sistema de Información de la Vicerrectoría de Servicios - SIVISAE</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Sistema de Información de la Vicerrectoría de Servicios - SIVISAE</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+        }
+
+        .contenedor {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .formulario {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .tabla-principal {
+            border-collapse: collapse;
+            background-color: #1B4F87;
+        }
+
+        .tabla-principal td {
+            padding: 8px;
+        }
+
+        .tabla-datos {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .tabla-datos td {
+            padding: 8px;
+        }
+
+        .etiqueta {
+            color: white;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .campo {
+            width: 100%;
+            height: 30px;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+
+        .boton {
+            width: 98px;
+            height: 28px;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .mensaje {
+            color: red;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+    </style>
 
 </head>
 
 
 <body>
-     <center><img src="topoun1.png">
-     <br>
-     <br>
-     <form name="formLogin" method="post" action="exeLogin.php">
-          <img src="SiSTUNA2.png">
-          <br>
-          <br> 
-          
-          <table border="1" bgcolor = "#1B4F87" >
-                <tbody>
-                      <tr>
-                         <td><div align="center"><font color = "white">Zona Caribe - ZCAR</font></div></td>
-                      </tr>
-                      <tr>
-                         <td><table  border="1">
-                                  <tbody><tr>
-                                       <td width="35%"><span><font color = "white">Acta o Registro</font></span></td>
-                                       <td width="65%"><input name="usuario" class="Estilo3" id="usuario" size="40" type="text"></td>
-                                     </tr>
-                                     <tr>
-                                        <td><span><font color = "white">Documento</font></span></td>
-                                        <td><input name="contrasena" class="Estilo3" id="contrasena" size="40" type="password"></td>
-                                     </tr>
-                                  </tbody>
-                              </table>
-                           </td>
-                      </tr>
-                    <tr>
-            <td><table bgcolor="blue border="0">
-              <tbody><tr>
-                      <center><a href="javascript:validar(formLogin.usuario.value,formLogin.contrasena.value);"><img src="login.gif" width="98" border="0" height="28"></a></center>
-                     </tr>
-                
-              
-            </tbody></table></td>
-          </tr>
-      </tbody></table></td>
-    </tr>
-  </tbody></table>
-</form>
-<p class="Estilo3 Estilo2"><em></em></p>
-<br>
-<img src="bottuna3.png">
-<br>
-<br>
+
+<div class="contenedor">
+
+    <!-- Imagen superior -->
+    <img src="topoun1.png" alt="UNAD">
+
+    <br>
+    <br>
+
+    <!-- Logo -->
+    <img src="SiSTUNA2.png" alt="SIVISAE">
+
+    <br>
+    <br>
 
 
-</center>
+    <!-- FORMULARIO -->
+    <form id="formLogin" class="formulario">
+
+        <table border="1" class="tabla-principal">
+
+            <tbody>
+
+                <!-- Zona -->
+                <tr>
+
+                    <td>
+
+                        <div align="center">
+
+                            <font color="white">
+                                Zona Caribe - ZCAR
+                            </font>
+
+                        </div>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- Datos -->
+                <tr>
+
+                    <td>
+
+                        <table border="1" class="tabla-datos">
+
+                            <tbody>
+
+                                <!-- ACTA -->
+                                <tr>
+
+                                    <td width="35%">
+
+                                        <span class="etiqueta">
+                                            Acta o Registro
+                                        </span>
+
+                                    </td>
+
+                                    <td width="65%">
+
+                                        <input
+                                            name="usuario"
+                                            class="campo"
+                                            id="usuario"
+                                            type="text"
+                                            autocomplete="off"
+                                            required
+                                        >
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- DOCUMENTO -->
+                                <tr>
+
+                                    <td>
+
+                                        <span class="etiqueta">
+                                            Documento
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+
+                                        <input
+                                            name="contrasena"
+                                            class="campo"
+                                            id="contrasena"
+                                            type="password"
+                                            autocomplete="off"
+                                            required
+                                        >
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </td>
+
+                </tr>
+
+
+                <!-- BOTÓN -->
+                <tr>
+
+                    <td>
+
+                        <center>
+
+                            <button
+                                type="submit"
+                                style="background:none; border:0; padding:0; cursor:pointer;"
+                            >
+
+                                <img
+                                    src="login.gif"
+                                    width="98"
+                                    height="28"
+                                    border="0"
+                                    alt="Consultar"
+                                >
+
+                            </button>
+
+                        </center>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <!-- Mensaje de error -->
+        <div id="mensaje" class="mensaje"></div>
+
+    </form>
+
+
+    <br>
+    <br>
+
+    <!-- Imagen inferior -->
+    <img src="bottuna3.png" alt="UNAD">
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT DE CONSULTA
+====================================================== -->
+
+<script>
+
+    // Esperamos a que el formulario sea enviado
+    document.getElementById("formLogin").addEventListener("submit", function(event) {
+
+        // Evita que el formulario se envíe a PHP
+        event.preventDefault();
+
+        // Obtener los valores
+        var acta = document.getElementById("usuario").value.trim();
+
+        var documento = document.getElementById("contrasena").value.trim();
+
+        var mensaje = document.getElementById("mensaje");
+
+
+        // Limpiar mensaje anterior
+        mensaje.innerHTML = "";
+
+
+        // ==========================================
+        // VALIDACIÓN DEL ACTA
+        // ==========================================
+
+        if (acta === "46183" && documento === "22868772") {
+
+            /*
+             * Los datos son correctos.
+             *
+             * Abrimos la página 46183.html
+             */
+
+            window.location.href = "46183.html";
+
+            return;
+        }
+	
+	if (acta === "37460" && documento === "60398418") {
+
+            /*
+             * Los datos son correctos.
+             *
+             * Abrimos la página 37460.html
+             */
+
+            window.location.href = "37460.html";
+
+            return;
+        }
+
+
+        // ==========================================
+        // DATOS INCORRECTOS
+        // ==========================================
+
+        mensaje.innerHTML =
+            "El Acta o Registro y el Documento no son correctos.";
+
+    });
+
+</script>
+
+
+</body>
 
 </html>
