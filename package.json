@@ -1,0 +1,12 @@
+{
+  "name": "sistema-consulta-academica-demo",
+  "version": "1.0.0",
+  "description": "Sistema independiente de consulta académica con datos ficticios",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

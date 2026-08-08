@@ -1,0 +1,65 @@
+
+<html>
+<head>
+
+
+<script type="text/javascript" src="funciones.js"></script>
+<title>Sistema de Información de la Vicerrectoría de Servicios - SIVISAE</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+
+
+</head>
+
+
+<body>
+     <center><img src="topoun1.png">
+     <br>
+     <br>
+     <form name="formLogin" method="post" action="exeLogin.php">
+          <img src="SiSTUNA2.png">
+          <br>
+          <br> 
+          
+          <table border="1" bgcolor = "#1B4F87" >
+                <tbody>
+                      <tr>
+                         <td><div align="center"><font color = "white">Zona Caribe - ZCAR</font></div></td>
+                      </tr>
+                      <tr>
+                         <td><table  border="1">
+                                  <tbody><tr>
+                                       <td width="35%"><span><font color = "white">Acta o Registro</font></span></td>
+                                       <td width="65%"><input name="usuario" class="Estilo3" id="usuario" size="40" type="text"></td>
+                                     </tr>
+                                     <tr>
+                                        <td><span><font color = "white">Documento</font></span></td>
+                                        <td><input name="contrasena" class="Estilo3" id="contrasena" size="40" type="password"></td>
+                                     </tr>
+                                  </tbody>
+                              </table>
+                           </td>
+                      </tr>
+                    <tr>
+            <td><table bgcolor="blue border="0">
+              <tbody><tr>
+                      <center><a href="javascript:validar(formLogin.usuario.value,formLogin.contrasena.value);"><img src="login.gif" width="98" border="0" height="28"></a></center>
+                     </tr>
+                
+              
+            </tbody></table></td>
+          </tr>
+      </tbody></table></td>
+    </tr>
+  </tbody></table>
+</form>
+<p class="Estilo3 Estilo2"><em></em></p>
+<br>
+<img src="bottuna3.png">
+<br>
+<br>
+
+
+</center>
+
+</html>
